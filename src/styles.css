@@ -1,0 +1,35 @@
+body {
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+button {
+  margin: 10px;
+}
+
+#start-panel {
+  display: inline-block;
+  background-color: ;
+  border: solid black;
+}
+#easy-plant {
+  background-color: ;
+}
+
+#health {
+  margin: 10px;
+}
+
+.health-bar {
+  width: 100px;
+  height: 100px;
+  border: solid white;
+  background-color: green;
+  border-radius: 10px;
+}
+
+.plant-profile {
+  display: block;
+  height: 500px;
+}

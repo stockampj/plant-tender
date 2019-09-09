@@ -43,8 +43,7 @@
     "build": "webpack --mode development",
     "start": "npm run build; webpack-dev-server --open --mode development",
     "lint": "eslint src/*.js",
-    "test": "./node_modules/karma/bin/karma start karma.conf.js",
-    "watch": "webpack --watch"
+    "test": "./node_modules/karma/bin/karma start karma.conf.js"
   },
   "keywords": [],
   "author": "Joel Stockamp and Anita Kemp",

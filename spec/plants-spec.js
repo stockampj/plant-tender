@@ -68,9 +68,19 @@ describe ('plant', function(){
     plant = new Plant("cactus", 20, "easy");
     plant.resilience = 1;
     plant.setPlantVerdency();
-    plant.goodByeWorld();
     jasmine.clock().tick(5001);
     plant.feedPlant();
     expect(plant.resilience).toEqual(0);
-  })
+  });
+  // it('should count how many plants have died', function(){
+  //   let deathCount = 0;
+  //   let greenhouse = new Greenhouse();
+  //   greenhouse.easy.setPlantVerdency();
+  //   greenhouse.easy.goodByeWorld();
+  //   greenhouse.easy.resilience = 1;
+  //   jasmine.clock().tick(5001);
+  //   console.log(greenhouse.easy.resilience)
+  //   expect(deathCount).toEqual(1);
+  //
+  // });
 });
