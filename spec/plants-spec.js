@@ -41,14 +41,36 @@ describe ('plant', function(){
     let greenhouse = new Greenhouse();
     let cactus = greenhouse.easy
     expect(greenhouse.easy).toEqual(cactus);
-  })
+  });
 
   it('should check if feeding the plant restores its resilience by 50% if it is under  half its health', function(){
     plant = new Plant("cactus", 20, "easy");
     plant.resilience = 9;
     plant.feedPlant()
     expect(plant.resilience).toEqual(19);
+  });
 
+  it('should also check feeding it does not allow it to be over its max resilience',function(){
+    plant = new Plant("cactus", 20, "easy");
+    plant.resilience = 12;
+    plant.feedPlant()
+    expect(plant.resilience).toEqual(20);
+  });
+  it('should wither and die if plant gets to 0 verdency', function(){
+    plant = new Plant("cactus", 20, "easy");
+    plant.resilience = 1;
+    plant.setPlantVerdency();
+    plant.goodByeWorld();
+    jasmine.clock().tick(5001);
+    expect(plant.alive).toBe(false);
+  });
+  it('should prevent user from feeding the plant if it has withered and died', function(){
+    plant = new Plant("cactus", 20, "easy");
+    plant.resilience = 1;
+    plant.setPlantVerdency();
+    plant.goodByeWorld();
+    jasmine.clock().tick(5001);
+    plant.feedPlant();
+    expect(plant.resilience).toEqual(0);
   })
 });
-// It should also check feeding it does not allow it to be over its max resilience'
