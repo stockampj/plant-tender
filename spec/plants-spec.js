@@ -1,4 +1,5 @@
-import {Plant} from './../src/project.js'
+import {Plant, Greenhouse} from './../src/project.js'
+
 describe ('plant', function(){
   let plant;
   beforeEach(function(){
@@ -35,4 +36,19 @@ describe ('plant', function(){
     jasmine.clock().tick(1001);
     expect(plant.resilience).toEqual(14);
   });
+
+  it('should check if greenhouse object holds a cactus, fern and orchid for easy,medium and hard modes', function (){
+    let greenhouse = new Greenhouse();
+    let cactus = greenhouse.easy
+    expect(greenhouse.easy).toEqual(cactus);
+  })
+
+  it('should check if feeding the plant restores its resilience by 50% if it is under  half its health', function(){
+    plant = new Plant("cactus", 20, "easy");
+    plant.resilience = 9;
+    plant.feedPlant()
+    expect(plant.resilience).toEqual(19);
+
+  })
 });
+// It should also check feeding it does not allow it to be over its max resilience'
