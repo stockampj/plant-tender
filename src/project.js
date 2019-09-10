@@ -1,5 +1,5 @@
 
-let deathCount = 0;
+// let deathCount = 0;
 export let plant1hp;
 
 export class Plant {
@@ -10,38 +10,28 @@ export class Plant {
     this.difficulty = difficulty;
     this.alive = true;
   }
-  // goodByeWorld(){
-  //       this.alive=false;
-  //       this.maxResilience = 0;
-  //       deathCount++;
-  //       this.difficulty = "dead"
-  //       console.log(deathCount)
-  // }
+  goodByeWorld(){
+        this.alive=false;
+        this.maxResilience = 0;
+        this.difficulty = "dead"
+        alert("You have failed! Your plant depended on you!")
+  }
 
   setPlantVerdency(){
     if (this.difficulty === "easy") {
       setInterval(() => {
         this.resilience--;
          plant1hp = this.resilience;
-        // if (this.resilience <=0){
-        //   this.goodByeWorld();
-        // }
-      }, 500);
+      }, 250);
     } else if (this.difficulty === "med") {
       setInterval(() => {
         this.resilience--;
         return this.resilience;
-        // if (this.resilience <=0){
-        //   this.goodByeWorld();
-        // }
       }, 2000);
     } else if (this.difficulty === "hard") {
       setInterval(() => {
         this.resilience--;
         return this.resilience;
-        // if (this.resilience <=0){
-        //   this.goodByeWorld();
-        // }
       }, 1000);
     } else {
       return false;
