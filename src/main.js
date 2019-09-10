@@ -12,6 +12,26 @@ $(document).ready(function(){
   let fern = new Plant("fern", 15, "med");
   let orchid = new Plant("orchid", 15, "hard");
   let timer = 0;
+  let request = new XMLHttpRequest();
+  const url = `https://api.giphy.com/v1/gifs/search?q=withered&api_key=${process.env.API_KEY}`;
+
+  request.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+        const response = JSON.parse(this.responseText);
+        console.log(response);
+        getElements(response);
+      }
+    }
+    // console.log(response)
+
+    request.open("GET", url, true);
+    request.send();
+    const getElements = function(response) {
+      console.log(response.data[0].url);
+      $(".endGame").html(`<img src='${response.data[1].images.downsized.url}'>` )
+    }
+
+
   $(".plantButton").click(function(){
     const cmhp = cactus.maxResilience;
     const fmhp = fern.maxResilience;
