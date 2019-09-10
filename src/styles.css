@@ -1,35 +1,71 @@
 body {
   background-image: url(images/background.jpg);
-  background-size: cover;
+  background-size: 75%;
   background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-button {
-  margin: 10px;
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#start-panel {
-  display: inline-block;
-  background-color: ;
-  border: solid black;
-}
-#easy-plant {
-  background-color: ;
+.plant-holder {
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 #health {
-  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .health-bar {
-  width: 100px;
-  height: 100px;
+  width: 25px;
+  height: 25px;
   border: solid white;
   background-color: green;
   border-radius: 10px;
+  margin: 2px;
+}
+
+.health-bar-display{
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+#plant-panel {
+  width: 200px;
 }
 
 .plant-profile {
   display: block;
-  height: 500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plant-feed-panel {
+  display: block;
+  width: 200px;
+  text-align: center;
+}
+
+#start-panel {
+  display: block;
+  background-color: ;
+  width: 530px;
+  text-align: center;
+
+}
+
+button {
+  display: inline-block;
+  margin: 10px;
+  width: 100px;
 }

@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <title>Bears!</title>
-  </head>
-  <body>
-    <div class="row">
-      <div class="col-3" id="start-panel">
-        <button class="btn btn-primary" type="button" name="button" id="easy-start">easy</button><br>
-        <button class="btn btn-primary" type="button" name="button"id="medium-start">medium</button><br>
-        <button class="btn btn-primary" type="button" name="button" id="hard-start">hard</button>
+<head>
+  <title>Bears!</title>
+</head>
+<body>
+  <div class="container">
+    <div class="plant-holder" id="plant1">
+      <div class="row" id="health">
+        <div class="health-bar-display" >
+          <h5>20</h5>
+        </div>
+        <div class="health-bar" id="p1-20%"></div>
+        <div class="health-bar" id="p1-40%"></div>
+        <div class="health-bar" id="p1-60%"></div>
+        <div class="health-bar" id="p1-80%"></div>
+        <div class="health-bar" id="p1-100%"></div>
       </div>
-      <div class="col-9" id="easy-plant">
+      <div class="row">
+        <div id="plant-panel">
           <img class="plant-profile" src="images/happycactus.png" alt="">
+        </div>
+      </div>
+      <div class="row plant-feed-panel">
+        <button class="btn btn-primary" type="button" name="button" id="easy-start">Feed</button>
+      </div>
+      <div class="row">
       </div>
     </div>
-    <div class="row" id="health">
-      <div class="col-1 health-bar" id="20%"></div>
-      <div class="col-1 health-bar" id="40%"></div>
-      <div class="col-1 health-bar" id="60%"></div>
-      <div class="col-1 health-bar" id="80%"></div>
-      <div class="col-1 health-bar" id="100%"></div>
-    </div>
-  </body>
+      <div id="start-panel">
+        <h3>Add Plant:
+          <button class="btn btn-primary" type="button" name="button" id="easy-start">easy</button>
+          <button class="btn btn-primary" type="button" name="button"id="medium-start">medium</button>
+          <button class="btn btn-primary" type="button" name="button" id="hard-start">hard</button>
+        </h3>
+      </div>
+  </div>
+</body>
 </html>
