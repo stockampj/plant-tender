@@ -58,6 +58,8 @@ $(document).ready(function(){
         $("#p1-80").fadeOut();
         $("#p1-60").fadeOut();
         $("#p1-40").fadeOut();
+        $(".p1-hp").addClass("red")
+        $(".p1-hp").removeClass("yellow")
       } else if(plant1hp <= (.4 * cmhp)){
         $("#p1-100").fadeOut();
         $("#p1-80").fadeOut();
@@ -65,6 +67,7 @@ $(document).ready(function(){
       } else if(plant1hp <= (.6 * cmhp)){
         $("#p1-100").fadeOut();
         $("#p1-80").fadeOut();
+        $(".p1-hp").addClass("yellow")
       } else if(plant1hp <= (.8 * cmhp)){
         $("#p1-100").fadeOut();
       }
@@ -84,6 +87,8 @@ $(document).ready(function(){
         $("#p2-80").fadeOut();
         $("#p2-60").fadeOut();
         $("#p2-40").fadeOut();
+        $(".p2-hp").addClass("red")
+        $(".p2-hp").removeClass("yellow")
       } else if(plant2hp <= (.4 * fmhp)){
         $("#p2-100").fadeOut();
         $("#p2-80").fadeOut();
@@ -91,6 +96,7 @@ $(document).ready(function(){
       } else if(plant2hp <= (.6 * fmhp)){
         $("#p2-100").fadeOut();
         $("#p2-80").fadeOut();
+        $(".p2-hp").addClass("yellow")
       } else if(plant2hp <= (.8 * fmhp)){
         $("#p2-100").fadeOut();
       }
@@ -110,6 +116,8 @@ $(document).ready(function(){
         $("#p3-80").fadeOut();
         $("#p3-60").fadeOut();
         $("#p3-40").fadeOut();
+        $(".p3-hp").addClass("red")
+        $(".p3-hp").removeClass("yellow")
       } else if(plant3hp <= (.4 * omhp)){
         $("#p3-100").fadeOut();
         $("#p3-80").fadeOut();
@@ -117,6 +125,7 @@ $(document).ready(function(){
       } else if(plant3hp <= (.6 * omhp)){
         $("#p3-100").fadeOut();
         $("#p3-80").fadeOut();
+        $(".p3-hp").addClass("yellow")
       } else if(plant3hp <= (.8 * omhp)){
         $("#p3-100").fadeOut();
       }
@@ -125,13 +134,19 @@ $(document).ready(function(){
   $("#plant1-feed").click(function(){
     cactus.feedPlant();
     $(".p1-hp").fadeIn();
+    $(".p1-hp").removeClass("yellow")
+    $(".p1-hp").removeClass("red")
   });
   $("#plant2-feed").click(function(){
     fern.feedPlant();
     $(".p2-hp").fadeIn();
+    $(".p2-hp").removeClass("yellow")
+    $(".p2-hp").removeClass("red")
   });
   $("#plant3-feed").click(function(){
     orchid.feedPlant();
     $(".p3-hp").fadeIn();
+    $(".p3-hp").removeClass("yellow")
+    $(".p3-hp").removeClass("red")
   });
 });

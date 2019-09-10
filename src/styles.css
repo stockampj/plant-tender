@@ -83,3 +83,11 @@ button {
   margin: 10px;
   width: 100px;
 }
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
