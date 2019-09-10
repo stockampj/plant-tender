@@ -23,11 +23,10 @@ export class Plant {
       setInterval(() => {
         this.resilience--;
          plant1hp = this.resilience;
-         console.log(plant1hp);
         // if (this.resilience <=0){
         //   this.goodByeWorld();
         // }
-      }, 3000);
+      }, 500);
     } else if (this.difficulty === "med") {
       setInterval(() => {
         this.resilience--;
