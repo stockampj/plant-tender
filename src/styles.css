@@ -15,6 +15,12 @@ body {
 .plant-holder {
   background-repeat: no-repeat;
   overflow: hidden;
+  width:200px;
+  padding: 5px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 10px;
+  float: left;
 }
 
 #health {
@@ -40,7 +46,10 @@ body {
 }
 
 #plant-panel {
+  display: block;
   width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .plant-profile {
@@ -52,13 +61,14 @@ body {
 
 .plant-feed-panel {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 200px;
   text-align: center;
 }
 
 #start-panel {
   display: block;
-  background-color: ;
   width: 530px;
   text-align: center;
 
