@@ -1,5 +1,6 @@
 
 let deathCount = 0;
+export let plant1hp;
 
 export class Plant {
   constructor (name, resilience, difficulty){
@@ -21,13 +22,16 @@ export class Plant {
     if (this.difficulty === "easy") {
       setInterval(() => {
         this.resilience--;
+         plant1hp = this.resilience;
+         console.log(plant1hp);
         // if (this.resilience <=0){
         //   this.goodByeWorld();
         // }
-      }, 5000);
+      }, 3000);
     } else if (this.difficulty === "med") {
       setInterval(() => {
         this.resilience--;
+        return this.resilience;
         // if (this.resilience <=0){
         //   this.goodByeWorld();
         // }
@@ -35,6 +39,7 @@ export class Plant {
     } else if (this.difficulty === "hard") {
       setInterval(() => {
         this.resilience--;
+        return this.resilience;
         // if (this.resilience <=0){
         //   this.goodByeWorld();
         // }
